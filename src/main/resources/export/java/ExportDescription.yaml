@@ -380,6 +380,11 @@ Instructions:
     ClassName: "JoystickButton"
     Construction: "final ${ClassName} #variable($Name) = new ${ClassName}(#variable($Joystick), XboxController.Button.k${Button}.value);"
 
+  DoubleSupplier:
+    Defaults: None
+    ClassName: None
+    Construction: None
+    
   Command:
     Defaults: "Command,None"
   Command Group:

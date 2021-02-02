@@ -854,10 +854,25 @@ Palette:
             default: "A"
           #Button("")
 
+  - Suppliers:
+      - !Component
+        name: DoubleSupplier
+        type: DataSupplier
+        properties:
+          - !TypeSelectionProperty
+            name: Input
+            type: Joystick
+            default: None
+          - !ChoicesProperty
+            name: Axis
+            choices: ["0", "1", "2", "3", "4", "5"]
+            default: 1
+
   - Commands:
       - !Component
         name: Command
         type: Command
+        supports: {DataSupplier: -1}
         help: A command specifies an action that the robot can perform.
         properties:
           - !TypeSelectionProperty
@@ -869,20 +884,12 @@ Palette:
             default: true
           - !TypeSelectionProperty
             name: DoubleSupplier 1
-            type: Joystick
+            type: DataSupplier
             default: None
-          - !ChoicesProperty
-            name: DoubleSupplier 1 Axis
-            choices: ["0", "1", "2", "3", "4", "5"]
-            default: 1
           - !TypeSelectionProperty
             name: DoubleSupplier 2
-            type: Joystick
+            type: DataSupplier
             default: None
-          - !ChoicesProperty
-            name: DoubleSupplier 2 Axis
-            choices: ["0", "1", "2", "3", "4", "5"]
-            default: 1
           - !Parameters
             name: Parameters
             default: []

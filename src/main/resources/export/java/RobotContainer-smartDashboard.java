@@ -9,6 +9,7 @@
 
 ${Collections.reverse($components)}
     // SmartDashboard Buttons
+    #set($params = $component.getProperty("Parameters").getValue())
 #foreach( $component in $components )
 #if ($component.getBase().getType() == "Command"
      && $component.getProperty("Button on SmartDashboard").getValue())
